@@ -2,7 +2,7 @@
 # https://github.com/GoogleContainerTools/container-structure-test
 schemaVersion: "2.0.0"
 commandTests:
-  - name: "yamllint"
-    command: "yamllint"
-    args: ["--version"]
-    expectedOutput: ["yamllint 1.20.0"]
+- name: "yamllint"
+  command: "yamllint"
+  args: ["--version"]
+  expectedOutput: ["yamllint 1.20.0"]

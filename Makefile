@@ -5,4 +5,4 @@ ci-local:
 test:
 	container-structure-test test --image quay.io/suzuki_shunsuke/yamllint:local --config test.yaml
 yamllint:
-	yamllint -c .yamllint.yml .drone.yml .yamllint.yml
+	find . -name "*.yml" -o -name "*.yaml" -print0 | xargs -0 yamllint -c .yamllint.yml
