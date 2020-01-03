@@ -12,7 +12,7 @@ steps:
   settings:
     registry: quay.io
     repo: &image_path quay.io/suzuki_shunsuke/yamllint
-    username: suzuki_shunsuke
+    username: "suzuki_shunsuke+yamllint"
     password:
       from_secret: quayio_password
     tags:
