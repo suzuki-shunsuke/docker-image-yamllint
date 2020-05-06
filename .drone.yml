@@ -20,7 +20,7 @@ platform:
 
 steps:
 - name: build and push docker
-  image: &plugin_docker plugins/docker:18.09.0
+  image: plugins/docker:18.09.0
   settings:
     registry: quay.io
     repo: &image_path quay.io/suzuki_shunsuke/yamllint
@@ -28,14 +28,14 @@ steps:
     password:
       from_secret: quayio_password
     tags:
-    - "1.20.0__${DRONE_TAG##v}"
-    - "1.20.0"
+    - "1.23.0__${DRONE_TAG##v}"
+    - "1.23.0"
   when:
     event:
     - tag
 
 - name: test to build docker
-  image: *plugin_docker
+  image: plugins/docker:18.09.0
   settings:
     registry: quay.io
     repo: *image_path
