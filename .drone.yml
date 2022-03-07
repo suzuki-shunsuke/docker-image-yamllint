@@ -20,7 +20,7 @@ platform:
 
 steps:
 - name: build and push docker
-  image: plugins/docker:18.09.2
+  image: plugins/docker:20.10.9
   settings:
     registry: quay.io
     repo: &image_path quay.io/suzuki_shunsuke/yamllint
@@ -35,7 +35,7 @@ steps:
     - tag
 
 - name: test to build docker
-  image: plugins/docker:18.09.2
+  image: plugins/docker:20.10.9
   settings:
     registry: quay.io
     repo: *image_path
